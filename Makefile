@@ -9,6 +9,7 @@ format:
 	black *.py
 
 lint:
-	pylint --disable=R,C,W,W0614 hello.py
+	#pylint --disable=R,C,W,W0614 hello.py
+	pylint --disable=R,C hello.py
 
 all: install lint test

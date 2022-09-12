@@ -6,9 +6,9 @@ test:
 	python -m pytest -vv test_hello.py
 
 format:
-	black *.py 
+	black *.py
 
 lint:
-	pylint --disable=R, hello.py
+	pylint --disable=R,C hello.py
 
 all: install lint test

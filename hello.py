@@ -1,10 +1,6 @@
 import random
 # write a hello function that prints hello world
-def hello():
-    print("Hello World!")
-
 # invoke hello function
-hello()
 
 # write decorator function that logs input and outputs and times it to a function
 def log(func):
@@ -31,4 +27,3 @@ def fruit_generator():
 # invoke fruit generator
 for i in range(5):
     print(next(fruit_generator()))
-

@@ -11,4 +11,4 @@ format:
 lint:
 	pylint --disable=R, hello.py
 
-all: install lint test format
+all: install lint test

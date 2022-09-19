@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-#from dblib.querydb import querydb
+from dblib.querydb import querydb
 
 app = FastAPI()
 
@@ -28,7 +28,7 @@ async def query():
 
 if __name__ == "__main__":
     uvicorn.run(app, port=8080, host="0.0.0.0")
-    
+
 
 
     

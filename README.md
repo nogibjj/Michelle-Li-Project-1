@@ -9,6 +9,18 @@ The purpose of this project is ot learn how to create scaffolds and work with Gi
 The dataset I will be using for this project is from Kaggle. It contains 607 salaries of data scientist roles from 2019 - 2022. I imported the dataset from Kaggle into Databricks and performed exploratory data analysis in Databricks. 
 https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries
 
+## Setup authorization
+
+[databricks-python](https://docs.microsoft.com/en-us/azure/databricks/dev-tools/python-api)
+
+Place in Codespace secrets
+* [unix, linux, mac](https://docs.microsoft.com/en-us/azure/databricks/dev-tools/python-api#unixlinuxandmacos)
+
+```bash
+DATABRICKS_HOST
+DATABRICKS_TOKEN
+```
+
 ## Test out CLI
 
 ```

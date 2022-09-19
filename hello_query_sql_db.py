@@ -11,6 +11,7 @@ def cli():
 @cli.command()
 @click.option("--query", default="SELECT * FROM default.diamonds LIMIT 2", help="SQL query to execute")
 
+#function to execute the query
 def cli_query(query):
     #execute the query
     querydb(query)

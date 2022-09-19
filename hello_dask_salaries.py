@@ -1,4 +1,3 @@
-import py_compile
 from dblib import salaries
 
 ddf = salaries.load_data_dask()

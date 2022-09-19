@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import os
 import click
 from dblib.querydb import querydb
 

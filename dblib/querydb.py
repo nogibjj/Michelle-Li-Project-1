@@ -1,9 +1,8 @@
-from databricks import sql
-import os
-
 """
 Requires you to run quickstart notebook first to create the database.
 """
+import os
+from databricks import sql
 
 def querydb(query="SELECT * FROM default.diamonds LIMIT 2"):
     with sql.connect(
@@ -13,8 +12,6 @@ def querydb(query="SELECT * FROM default.diamonds LIMIT 2"):
     ) as connection:
 
         with connection.cursor() as cursor:
-            cursor.execute("SELECT * FROM default.diamonds LIMIT 2")
+            cursor.execute(query)
             result = cursor.fetchall()
-            for row in result:
-                print(result)
     return result

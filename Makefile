@@ -6,10 +6,9 @@ test:
 	python -m pytest -vv test_hello.py
 
 format:
-	black *.py
+	black *.py dblib/*py
 
 lint:
-	#pylint --disable=R,C,W,W0614 hello.py
-	pylint --disable=R,C hello.py
+	pylint --disable=R,C --ignore-patterns=test_.*?py *.py dblib
 
 all: install lint test

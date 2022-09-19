@@ -1,18 +1,21 @@
-"""
-Requires you to run quickstart notebook first to create the database.
-"""
-
-from databricks import sql
+#!/usr/bin/env python3
 import os
+import click
+from dblib.querydb import querydb
 
-with sql.connect(
-    server_hostname=os.getenv("DATABRICKS_SERVER_HOSTNAME"),
-    http_path=os.getenv("DATABRICKS_HTTP_PATH"),
-    access_token=os.getenv("DATABRICKS_TOKEN"),
-) as connection:
+#build a click command line interface
+@click.group()
+def cli():
+    "A simple CLI to query a database"
 
-    with connection.cursor() as cursor:
-        cursor.execute("SELECT * FROM default.diamonds LIMIT 2")
-        result = cursor.fetchall()
-        for row in result:
-            print(result)
+#build a click command line interface
+@cli.command()
+@click.option("--query", default="SELECT * FROM default.diamonds LIMIT 2", help="SQL query to execute")
+
+def cli_query(query):
+    #execute the query
+    querydb(query)
+
+#run the cli
+if __name__ == "__main__":
+    cli()

@@ -1,6 +1,6 @@
 # Project 1
 ## Key Objectives
-The purpose of this project is ot learn how to create scaffolds and work with GitHub CodeSpace. I created a command line tool that that queries Databricks.
+The purpose of this project is ot learn how to create scaffolds and work with GitHub CodeSpace. I created a command line tool that that queries Databricks and created a simple FastAPI web application. 
 
 ## API Architectural Diagram
 ![Project-1-architecture (2)](https://user-images.githubusercontent.com/70456530/189802283-912b1b0e-1f51-486c-8849-b857557a44fa.jpg)

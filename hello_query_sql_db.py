@@ -9,7 +9,7 @@ def cli():
 
 #build a click command line interface
 @cli.command()
-@click.option("--query", default="SELECT * FROM default.diamonds LIMIT 2", help="SQL query to execute")
+@click.option("--query", default="SELECT experience_level, avg(salary_in_usd) AS avg_salary_usd FROM salaries GROUP BY experience_level")
 
 #function to execute the query
 def cli_query(query):

@@ -10,13 +10,13 @@ def log(func):
         result = func(*args, **kwargs)
         print("Output: {}".format(result))
         return result
-
     return wrapper
 
 
 # invoke decorator function
 def hello(x):
     print(f"Hello, World! {x}")
+    return(f"Hello, World! {x}")
 
 
 hello(3)
